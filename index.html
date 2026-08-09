@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +21,28 @@
             line-height: 1.5;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #ffffff;
             border-bottom: 1px solid #d9dde2;
-            padding: 48px 24px;
+            padding: 42px 24px;
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .header-text {
+            flex: 1;
         }
 
         header h1 {
@@ -41,6 +55,17 @@
             font-size: 1.05rem;
             max-width: 700px;
         }
+
+        .institutional-logo {
+            width: 330px;
+            max-width: 35%;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
 
         main {
             max-width: 1200px;
@@ -61,6 +86,10 @@
             color: #6b7075;
         }
 
+        /* =========================
+           MAP CARDS
+        ========================= */
+
         .map-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -72,7 +101,7 @@
             border: 1px solid #dfe2e5;
             border-radius: 10px;
             padding: 28px;
-            min-height: 220px;
+            min-height: 390px;
 
             display: flex;
             flex-direction: column;
@@ -128,19 +157,40 @@
             cursor: default;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             max-width: 1200px;
             margin: 30px auto 0;
             padding: 24px;
+
             border-top: 1px solid #d9dde2;
 
             color: #74797e;
             font-size: 0.85rem;
         }
 
-        @media (max-width: 600px) {
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
             header {
                 padding: 34px 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .institutional-logo {
+                width: 280px;
+                max-width: 100%;
             }
 
             main {
@@ -150,84 +200,155 @@
             header h1 {
                 font-size: 1.65rem;
             }
+
+            .map-card {
+                min-height: 300px;
+            }
         }
     </style>
+
 </head>
 
 <body>
 
-<header>
-    <div class="header-content">
-        <h1>Mapas interactivos</h1>
-        <p>
-            Herramientas de consulta y visualización de información
-            económica, social y territorial.
-        </p>
-    </div>
-</header>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-<main>
+    <header>
 
-    <div class="section-title">
-        <h2>Mapas disponibles</h2>
-        <p>Seleccione un mapa para iniciar la consulta.</p>
-    </div>
+        <div class="header-content">
 
-    <div class="map-grid">
+            <div class="header-text">
 
-        <!-- MAPA DE MARGINACIÓN -->
-        <a class="map-card active" href="./mapa_marginacion/">
+                <h1>Mapas interactivos</h1>
 
-            <span class="tag">Disponible</span>
+                <p>
+                    Herramientas de consulta y visualización de información
+                    económica, social y territorial.
+                </p>
 
-            <h3>Índice de Necesidad Prioritaria</h3>
+            </div>
 
-            <p>
-                identifica los municipios con mayor necesidad y potencial para realizar ferias de empleo, 
-		considerando condiciones sociales, desempleo, presencia empresarial y nivel educativo.
-            </p>
+            <img
+                src="./assets/sety_horizontal.png"
+                alt="Secretaría de Economía y Trabajo de Yucatán"
+                class="institutional-logo"
+            >
 
-            <span class="map-link">
-                Ver mapa →
-            </span>
+        </div>
 
-        </a>
+    </header>
 
 
-        <!-- FUTURO MAPA -->
-        <div class="map-card disabled">
+    <!-- =========================
+         MAIN
+    ========================== -->
 
-            <span class="tag">Próximamente</span>
+    <main>
 
-            <h3>MAPA 2</h3>
+        <div class="section-title">
+
+            <h2>Mapas disponibles</h2>
 
             <p>
-                Descripción.
+                Seleccione un mapa para iniciar la consulta.
             </p>
 
         </div>
 
 
-        <!-- FUTURO MAPA -->
-        <div class="map-card disabled">
+        <div class="map-grid">
 
-            <span class="tag">Próximamente</span>
 
-            <h3>MAPA 3</h3>
+            <!-- =========================
+                 MAPA 1
+            ========================== -->
 
-            <p>
-                Descripción.
-            </p>
+            <a
+                class="map-card active"
+                href="./mapa_marginacion/"
+            >
+
+                <span class="tag">
+                    Disponible
+                </span>
+
+                <h3>
+                    Índice de Necesidad Prioritaria
+                </h3>
+
+                <p>
+                    Identifica los municipios con mayor necesidad y potencial
+                    para realizar ferias de empleo, considerando condiciones
+                    sociales, desempleo, presencia empresarial y nivel educativo.
+                </p>
+
+                <span class="map-link">
+                    Ver mapa →
+                </span>
+
+            </a>
+
+
+            <!-- =========================
+                 MAPA 2
+            ========================== -->
+
+            <div class="map-card disabled">
+
+                <span class="tag">
+                    Próximamente
+                </span>
+
+                <h3>
+                    MAPA 2
+                </h3>
+
+                <p>
+                    Descripción.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 MAPA 3
+            ========================== -->
+
+            <div class="map-card disabled">
+
+                <span class="tag">
+                    Próximamente
+                </span>
+
+                <h3>
+                    MAPA 3
+                </h3>
+
+                <p>
+                    Descripción.
+                </p>
+
+            </div>
+
 
         </div>
 
-    </div>
+    </main>
 
-</main>
 
-<footer>
-    Dirección de Análisis y Coordinación de Proyectos · Secretaría de Economía y Trabajo de Yucatán · 2026
-</footer>
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        Dirección de Análisis y Coordinación de Proyectos ·
+        Secretaría de Economía y Trabajo de Yucatán ·
+        2026
+    </footer>
+
 
 </body>
+
 </html>
