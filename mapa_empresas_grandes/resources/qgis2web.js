@@ -12,7 +12,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-10391151.251542, 2051274.731164, -9250348.410746, 2612121.688908], map.getSize());
+map.getView().fit([-10113772.174052, 2209115.670033, -9646003.073912, 2477606.436473], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -515,26 +515,6 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 //layer search
 
-var searchLayer = new SearchLayer({
-    layer: lyr_ndicedeNecesidadPrioritaria_1,
-    colName: 'NOMGEO',
-    zoom: 10,
-    collapsed: true,
-    map: map,
-    maxResults: 10,
-    showOnFocus: false
-});
-
-map.addControl(searchLayer);
-
-document
-    .getElementsByClassName('search-layer')[0]
-    .getElementsByTagName('button')[0]
-    .className += ' fa fa-binoculars';
-
-document
-    .getElementsByClassName('search-layer-input-search')[0]
-    .placeholder = 'Buscar...';
 
 //scalebar
 

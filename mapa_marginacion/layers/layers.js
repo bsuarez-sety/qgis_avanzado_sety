@@ -35,9 +35,9 @@ var lyr_ndicedeNecesidadPrioritaria_1 = new ol.layer.Vector({
 
 lyr_GoogleTerrain_0.setVisible(true);lyr_ndicedeNecesidadPrioritaria_1.setVisible(true);
 var layersList = [lyr_GoogleTerrain_0,lyr_ndicedeNecesidadPrioritaria_1];
-lyr_ndicedeNecesidadPrioritaria_1.set('fieldAliases', {'CVEGEO': 'CVEGEO', 'CVE_ENT': 'CVE_ENT', 'CVE_MUN': 'CVE MUN', 'NOMGEO': 'NOM MUN', 'area': 'area', 'inp': 'INP', });
+lyr_ndicedeNecesidadPrioritaria_1.set('fieldAliases', {'CVEGEO': 'CVEGEO', 'CVE_ENT': 'CVE_ENT', 'CVE_MUN': 'Clave municipio', 'NOMGEO': 'Municipio', 'area': 'area', 'inp': 'Valor índice', });
 lyr_ndicedeNecesidadPrioritaria_1.set('fieldImages', {'CVEGEO': 'Hidden', 'CVE_ENT': 'Hidden', 'CVE_MUN': 'TextEdit', 'NOMGEO': 'TextEdit', 'area': 'Hidden', 'inp': 'TextEdit', });
-lyr_ndicedeNecesidadPrioritaria_1.set('fieldLabels', {'CVE_MUN': 'inline label - visible with data', 'NOMGEO': 'inline label - visible with data', 'inp': 'inline label - visible with data', });
+lyr_ndicedeNecesidadPrioritaria_1.set('fieldLabels', {'CVE_MUN': 'header label - visible with data', 'NOMGEO': 'header label - visible with data', 'inp': 'header label - visible with data', });
 lyr_ndicedeNecesidadPrioritaria_1.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
