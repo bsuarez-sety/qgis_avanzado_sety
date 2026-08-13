@@ -12,7 +12,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-10391151.251542, 2051274.731164, -9250348.410746, 2612121.688908], map.getSize());
+map.getView().fit([-10342684.330282, 2051274.731164, -9298815.332006, 2612121.688908], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -514,6 +514,7 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 
 //layer search
+
 
 var searchLayer = new SearchLayer({
     layer: lyr_ndicedeNecesidadPrioritaria_1,
