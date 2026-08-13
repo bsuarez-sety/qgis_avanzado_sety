@@ -517,7 +517,7 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 
 
 var searchLayer = new SearchLayer({
-    layer: lyr_ndicedeNecesidadPrioritaria_1,
+    layer: lyr_PoblacinDesocupada_1,
     colName: 'NOMGEO',
     zoom: 10,
     collapsed: true,
