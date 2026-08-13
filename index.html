@@ -90,11 +90,11 @@
            MAP CARDS
         ========================= */
 
-        .map-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
+	.map-grid {
+	    display: grid;
+	    grid-template-columns: repeat(2, minmax(0, 1fr));
+	    gap: 24px;
+	}
 
         .map-card {
             background: #ffffff;
@@ -178,33 +178,37 @@
 
         @media (max-width: 700px) {
 
-            header {
-                padding: 34px 20px;
-            }
+	    header {
+	        padding: 34px 20px;
+	    }
 
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 24px;
-            }
+	    .header-content {
+	        flex-direction: column;
+	        align-items: flex-start;
+	        gap: 24px;
+	    }
 
-            .institutional-logo {
-                width: 280px;
-                max-width: 100%;
-            }
+	    .institutional-logo {
+	        width: 280px;
+	        max-width: 100%;
+	    }
 
-            main {
-                padding: 32px 20px;
-            }
+	    main {
+	        padding: 32px 20px;
+	    }
 
-            header h1 {
-                font-size: 1.65rem;
-            }
+	    header h1 {
+	        font-size: 1.65rem;
+	    }
 
-            .map-card {
-                min-height: 300px;
-            }
-        }
+	    .map-grid {
+	        grid-template-columns: 1fr;
+	    }
+
+	    .map-card {
+	        min-height: 300px;
+	    }
+	}
     </style>
 
 </head>
@@ -258,97 +262,97 @@
         </div>
 
 
-        <div class="map-grid">
+<div class="map-grid">
+
+    <!-- =========================
+         MAPA 1
+    ========================== -->
+
+    <a
+        class="map-card active"
+        href="./mapa_marginacion/"
+    >
+
+        <span class="tag">
+            Disponible
+        </span>
+
+        <h3>
+            Índice de Necesidad Prioritaria
+        </h3>
+
+        <p>
+            Identifica los municipios con mayor necesidad y potencial
+            para realizar ferias de empleo, considerando condiciones
+            sociales, desempleo, presencia empresarial y nivel educativo.
+        </p>
+
+        <span class="map-link">
+            Ver mapa →
+        </span>
+
+    </a>
 
 
-            <!-- =========================
-                 MAPA 1
-            ========================== -->
+    <!-- =========================
+         MAPA 2
+    ========================== -->
 
-            <a
-                class="map-card active"
-                href="./mapa_marginacion/"
-            >
+    <a
+        class="map-card active"
+        href="./mapa_desocupacion/"
+    >
 
-                <span class="tag">
-                    Disponible
-                </span>
+        <span class="tag">
+            Disponible
+        </span>
 
-                <h3>
-                    Índice de Necesidad Prioritaria
-                </h3>
+        <h3>
+            Población Desocupada por Municipio
+        </h3>
 
-                <p>
-                    Identifica los municipios con mayor necesidad y potencial
-                    para realizar ferias de empleo, considerando condiciones
-                    sociales, desempleo, presencia empresarial y nivel educativo.
-                </p>
+        <p>
+            Porcentaje de la Población Económicamente Activa
+            (PEA) actualmente desocupada en los municipios de
+            Yucatán.
+        </p>
 
-                <span class="map-link">
-                    Ver mapa →
-                </span>
+        <span class="map-link">
+            Ver mapa →
+        </span>
 
-            </a>
-
-
-            <!-- =========================
-                 MAPA 2
-            ========================== -->
-
-            <a 
-                class="map-card active"
-                href="./mapa_desocupacion/"
-            >
-
-                <span class="tag">
-                    Disponible
-                </span>
-
-                <h3>
-                    Población Desocupada por Municipio
-                </h3>
-
-                <p>
-                    Porcentaje de la Población Económicamente Activa
-		    (PEA) actualmente desocupada en los municipios de
-		    Yucatán.
-                </p>
-
-                <span class="map-link">
-                    Ver mapa →
-                </span>
-
-            </div>
+    </a>
 
 
-            <!-- =========================
-                 MAPA 3
-            ========================== -->
+    <!-- =========================
+         MAPA 3
+    ========================== -->
 
-            <a
-		class="map-card active"
-		href="./mapa_empresas_grandes/"
-	    >
+    <a
+        class="map-card active"
+        href="./mapa_empresas_grandes/"
+    >
 
-                <span class="tag">
-                    Disponible
-                </span>
+        <span class="tag">
+            Disponible
+        </span>
 
-                <h3>
-                    Empresas Grandes en Yucatán
-                </h3>
+        <h3>
+            Empresas Grandes en Yucatán
+        </h3>
 
-                <p>
-                    Ubicación de las grandes empresas en las siete 
-		    regiones de Yucatán.
-                </p>
+        <p>
+            Ubicación de las grandes empresas en las siete
+            regiones de Yucatán.
+        </p>
 
-                <span class="map-link">
-                    Ver mapa →
-                </span>
+        <span class="map-link">
+            Ver mapa →
+        </span>
 
-            </div>
+    </a>
 
+</div>
 
         </div>
 
